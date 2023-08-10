@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=League Spartan"
+    />
+    <script
+      src="https://kit.fontawesome.com/ad11bda1f9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Password Generator</h1>
+      <!--password dispaly-->
+      <div class="display-screen">
+        <input
+          readonly
+          placeholder="Password"
+          class="display"
+          data-passwordDisplay
+        />
+
+        <button data-copy class="btn1">
+          <span class="span" data-copyMessage></span>
+          <img src="copy.png" alt="user" width="25" height="25" class="cpyy" />
+        </button>
+      </div>
+      <!--input container-->
+
+      <div class="inputContainer">
+        <!--length Batyega-->
+        <div class="passLength">
+          <p>Password Length</p>
+          <p dataLengthNo>0</p>
+        </div>
+        <!--slider-->
+        <input
+          type="range"
+          min="1"
+          max="20"
+          class="slider"
+          step="1"
+          dataLengthSlider
+        />
+
+        <!--Check Boxes -->
+        <div class="check">
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Includes Uppercase Letters</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Includes Lowercase Letters</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Numbers</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Include Symbols</label>
+        </div>
+        <!--strength-->
+        <div class="strength">
+          <p>Strength</p>
+          <div class="circle" data-indicator></div>
+        </div>
+        <!--Generate Pass-->
+        <button class="generate-btn">Generate Password</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
